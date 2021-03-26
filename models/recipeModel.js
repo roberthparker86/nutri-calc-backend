@@ -14,7 +14,8 @@ const Recipe = new Schema(
         sugar: Number,
         sodium: Number,
         chol: Number,
-        potas: Number
+        potas: Number,
+        servings: Number
     }
 );
 
