@@ -25,11 +25,13 @@ const updateRecipe = async (req, res) => {
         recipe.satFat = body.satFat;
         recipe.unsatFat = body.unsatFat;
         recipe.carbs = body.carbs;
-        recipe.fiber = body.fibers;
+        recipe.fiber = body.fiber;
         recipe.sugar = body.sugar;
         recipe.sodium = body.sodium;
         recipe.chol = body.chol;
         recipe.potas = body.potas;
+        recipe.servings = body.servings;
+        recipe.ingredients = body.ingredients;
 
         recipe
             .save()
