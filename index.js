@@ -1,9 +1,9 @@
 const express = require('express');
 const cors = require('cors');
 const { response } = require('express');
+const db = require('./db/index.js')
 
-const db = require('./db');
-const recipeRouter = require('./routes/recipeRouter');
+const recipeRouter = require('./routes/recipeRouter.js');
 
 const app = express();
 const apiPort = 3000;
@@ -11,8 +11,6 @@ const apiPort = 3000;
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 app.get('/', (req,res) => {
     res.send('Client successfully connected');

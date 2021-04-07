@@ -38,4 +38,4 @@ const Recipe = new Schema(
     }
 );
 
-module.exports = mongoose.model('recipes', Recipe);
+module.exports = mongoose.model('recipe', Recipe);
