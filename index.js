@@ -6,7 +6,11 @@ const db = require('./db/index.js')
 const recipeRouter = require('./routes/recipeRouter.js');
 
 const app = express();
-const apiPort = 3000;
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 3000;
+}
 
 app.use(cors());
 app.use(express.json());
@@ -18,4 +22,4 @@ app.get('/', (req,res) => {
 
 app.use('/api', recipeRouter);
 
-app.listen(apiPort, () => console.log(`Server is running on port ${apiPort}`));
+app.listen(port, () => console.log(`Server is running on port ${port}`));
