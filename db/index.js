@@ -1,4 +1,4 @@
-// require('dotenv').config();
+require('dotenv').config();
 const mongoose = require('mongoose');
 
 const uri = `mongodb+srv://${process.env.DBUSER}:${process.env.DBPASS}@main.uzttk.mongodb.net/home-recipes?retryWrites=true&w=majority`;
