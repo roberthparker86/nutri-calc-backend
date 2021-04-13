@@ -8,7 +8,7 @@ mongoose.connect(uri, {
     useCreateIndex: true,
     useUnifiedTopology: true
 }).catch((err) => {
-        console.log(`Error connecting to database \n${err}`);
+        console.log(`Error connecting to database \n${err}`):
     });
 const db = mongoose.connection;
 db.once('open', () => {
